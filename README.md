@@ -1,4 +1,4 @@
-# Grupa4-NVM
+﻿# Grupa4-NVM
 Tema projekta- Mikrokreditna organizacija NVM
 
 1.	Nedžad Džindo
@@ -39,4 +39,4 @@ Konačno, posljednji korisnik sistema, upravitelj poslovnice, ima sve mogučnost
 
 1. Korisnik usluga (klijent), je osoba koja ima mogućnost podnošenja zahtijeva za kredit na licu mjesta ili putem online sistema pri čemu na online sistemu klijent može da provjeri stanje kredita. Klijent na licu mjesta uplaćuje ratu za kredit ili viši iznos.
 2. Uposlenik, osoba koja radi u poslovnici mikrokreditne organizacije  vrši registraciju korisničkih računa, potvrđuje/odbija zahtjeve za kredit, sastavlja plan otplate kredita i potvrđuje iznos uplaćen za kredit klijenta.
-3. Upravitelj (menađer), osoba koja je šef određene poslovnice, ima iste nadležnosti kao i uposlenik i dodatno ima opciju brisanja/registracije novih uposlenika u sistem, brisanje korisničkih računa za zahtjev klijenta i dodavanje novih i brisanje starih poslovnica.
+3. Upravitelj (menadžer), osoba koja je šef određene poslovnice, ima iste nadležnosti kao i uposlenik i dodatno ima opciju brisanja/registracije novih uposlenika u sistem, brisanje korisničkih računa za zahtjev klijenta i dodavanje novih i brisanje starih poslovnica.
