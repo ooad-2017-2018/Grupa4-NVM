@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Content="Prijavi se" HorizontalAlignment="Left" Margin="495,387,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="379,37,0,0" Text="Mikrokreditna organizacija" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" SelectionChanged="TextBlock_SelectionChanged" Width="179"/>
+        <TextBlock HorizontalAlignment="Left" Margin="441,62,0,0" Text="NVM" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" SelectionChanged="TextBlock_SelectionChanged" Width="179"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="629,37,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBlock HorizontalAlignment="Left" Margin="355,146,0,0" Text="Korisničko ime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="422,229,0,0" Text="Šifra:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.694,-0.79"/>
+        <TextBox HorizontalAlignment="Left" Margin="485,134,0,0" Text="TextBox" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="485,217,0,0" Text="TextBox" VerticalAlignment="Top"/>
+    </Grid>
+</Page>
