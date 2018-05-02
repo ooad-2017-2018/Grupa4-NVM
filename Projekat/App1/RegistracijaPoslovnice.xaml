@@ -10,14 +10,14 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <TextBlock HorizontalAlignment="Left" Margin="160,151,0,0" Text="Adresa:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="153,193,0,0" Text="Lokacija:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="191,112,0,0" Text="ID:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="230,112,0,0" Text="generisani ID" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="230,151,0,0" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,70,0,0" Text="Adresa:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,112,0,0" Text="Lokacija:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="63,31,0,0" Text="ID:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="102,31,0,0" Text="generisani ID" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="102,70,0,0" Text="TextBox" VerticalAlignment="Top" Width="87"/>
 
-        <Custom:MapControl HorizontalAlignment="Left" Margin="230,197,0,0" VerticalAlignment="Top" Height="216" Width="507"/>
-        <Button Content="Registruj poslovnicu" HorizontalAlignment="Left" Margin="410,499,0,0" VerticalAlignment="Top"/>
+        <Custom:MapControl HorizontalAlignment="Left" Margin="63,154,0,0" VerticalAlignment="Top" Height="216" Width="226"/>
+        <Button Content="Registruj poslovnicu" HorizontalAlignment="Left" Margin="119,467,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

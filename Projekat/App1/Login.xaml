@@ -8,13 +8,14 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Prijavi se" HorizontalAlignment="Left" Margin="495,387,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="379,37,0,0" Text="Mikrokreditna organizacija" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" SelectionChanged="TextBlock_SelectionChanged" Width="179"/>
-        <TextBlock HorizontalAlignment="Left" Margin="441,62,0,0" Text="NVM" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" SelectionChanged="TextBlock_SelectionChanged" Width="179"/>
+        <Button Content="Prijavi se" HorizontalAlignment="Left" Margin="181,276,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Registruj se" HorizontalAlignment="Left" Margin="47,276,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="47,37,0,0" Text="Mikrokreditna organizacija    NVM" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" SelectionChanged="TextBlock_SelectionChanged" Width="237"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="629,37,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBlock HorizontalAlignment="Left" Margin="355,146,0,0" Text="Korisničko ime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="422,229,0,0" Text="Šifra:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.694,-0.79"/>
-        <TextBox HorizontalAlignment="Left" Margin="485,134,0,0" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="485,217,0,0" Text="TextBox" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="51,112,0,0" Text="Korisničko ime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="118,195,0,0" Text="Šifra:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.694,-0.79"/>
+        <TextBox HorizontalAlignment="Left" Margin="181,100,0,0" Text="TextBox" VerticalAlignment="Top" Width="92"/>
+        <TextBox HorizontalAlignment="Left" Margin="181,183,0,0" Text="TextBox" VerticalAlignment="Top" Width="92"/>
     </Grid>
 </Page>
