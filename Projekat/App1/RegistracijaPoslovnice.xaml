@@ -9,6 +9,32 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="VisualStateDesktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="mapa.Height" Value="350" />
+                        <Setter Target="mapa.Width" Value="500" />
+                        <Setter Target="registrujPoslovnicu.Margin" Value="150,500,0,0" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Mobile">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="mapa.Height" Value="226" />
+                        <Setter Target="mapa.Height" Value="226" />
+                        <Setter Target="registrujPoslovnicu.Margin" Value="100,450,0,0" />
+
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
         <TextBlock HorizontalAlignment="Left" Margin="32,70,0,0" Text="Adresa:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,112,0,0" Text="Lokacija:" TextWrapping="Wrap" VerticalAlignment="Top"/>
@@ -16,8 +42,8 @@
         <TextBlock HorizontalAlignment="Left" Margin="102,31,0,0" Text="generisani ID" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="102,70,0,0" Text="TextBox" VerticalAlignment="Top" Width="87"/>
 
-        <Custom:MapControl HorizontalAlignment="Left" Margin="63,154,0,0" VerticalAlignment="Top" Height="216" Width="226"/>
-        <Button Content="Registruj poslovnicu" HorizontalAlignment="Left" Margin="119,467,0,0" VerticalAlignment="Top"/>
+        <Custom:MapControl x:Name="mapa" HorizontalAlignment="Left" Margin="63,154,0,0" VerticalAlignment="Top" Height="237" Width="240"/>
+        <Button x:Name="registrujPoslovnicu" Content="Registruj poslovnicu" HorizontalAlignment="Left" Margin="100,450,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

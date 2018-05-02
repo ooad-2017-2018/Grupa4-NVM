@@ -8,6 +8,29 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+<VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                
+                <VisualState x:Name="Mobile">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="datumRodjenja.Margin" Value="47,173,0,0" />
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="VisualStateDesktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="datumRodjenja.Margin" Value="134,148,0,0" />
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <TextBlock HorizontalAlignment="Left" Margin="101,64,0,0" Text="Ime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="73,118,0,0" Text="Prezime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="20,148,0,0" Text="Datum rođenja:" TextWrapping="Wrap" VerticalAlignment="Top"/>
@@ -19,7 +42,7 @@
         <TextBox HorizontalAlignment="Left" Margin="134,52,0,0" Text="TextBox" VerticalAlignment="Top" Width="209"/>
         <TextBox HorizontalAlignment="Left" Margin="134,106,0,0" Text="TextBox" VerticalAlignment="Top" Width="209"/>
         <TextBox HorizontalAlignment="Left" Margin="134,291,0,0" Text="TextBox" VerticalAlignment="Top" Width="209"/>
-        <DatePicker HorizontalAlignment="Left" Margin="47,173,0,0" VerticalAlignment="Top" Width="266" Height="30"/>
+        <DatePicker x:Name="datumRodjenja" HorizontalAlignment="Left" Margin="47,173,0,0" VerticalAlignment="Top" Width="266" Height="30"/>
         <RadioButton Content="Ž" HorizontalAlignment="Left" Margin="232,235,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="M" HorizontalAlignment="Left" Margin="130,233,0,0" VerticalAlignment="Top"/>
         <Button Content="Registruj" HorizontalAlignment="Left" Margin="161,569,0,0" VerticalAlignment="Top"/>
