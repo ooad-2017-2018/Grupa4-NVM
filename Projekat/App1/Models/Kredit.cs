@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace App1
 {
-    public class Kredit : ZahtjevZaKredit
+    public class Kredit : ZahtjevZaKredit, INotifyPropertyChanged
     {
         private Uposlenik uposlenik;
         private double vratitiNovca;
@@ -17,30 +18,45 @@ namespace App1
         public Uposlenik Uposlenik
         {
             get { return uposlenik; }
-            set { uposlenik = value; }
+            set { uposlenik = value; OnPropertyChanged("Uposlenik"); }
         }
         public double VratitiNovca
         {
             get { return vratitiNovca; }
-            set { vratitiNovca = value; }
+            set { vratitiNovca = value; OnPropertyChanged("VratitiNovca"); }
         }
         public double IznosKamate
         {
             get { return iznosKamate; }
-            set { iznosKamate = value; }
+         
+            set { iznosKamate = value; OnPropertyChanged("IznosKamate"); }
+
         }
 
         public DateTime DanVracanja
         {
             get { return danVracanja; }
-            set { danVracanja = value; }
+            set { danVracanja = value; OnPropertyChanged("DanVracanja"); }
         }
      
         public DateTime DanDizanja
   
         {
             get { return danDizanja; }
-            set { danDizanja = value; }
+            set { danDizanja = value; OnPropertyChanged("DanDizanja"); }
+        }
+
+
+
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
 
 
