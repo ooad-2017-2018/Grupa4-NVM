@@ -14,7 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using Microsoft.WindowsAzure.MobileServices;
 namespace App1
 {
     /// <summary>
@@ -96,5 +96,7 @@ namespace App1
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+        public static MobileServiceClient MobileService = new
+        MobileServiceClient("https://MikroKreditNVM.azurewebsites.net");
     }
 }

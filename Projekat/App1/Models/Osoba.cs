@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,19 +11,24 @@ namespace App1
     {
         private string ime;
         private string prezime;
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         private int jmbg;
+        public string fourSqaureId { get; set; }
         private string brTel;
         private string adresa;
 
-      /*  public Osoba(string ime, string prezime, int jMBG, string brTel, string adresa)
+        public Osoba(string ime, string prezime, int jMBG, string brTel, string adresa)
         {
             Ime = ime;
             Prezime = prezime;
             JMBG = jMBG;
             BrTel = brTel;
             Adresa = adresa;
-        }*/
+        }
+        public Osoba()
+        {
 
+        }
         public string Ime
         {
             get { return ime; }

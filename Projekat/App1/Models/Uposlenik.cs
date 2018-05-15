@@ -11,6 +11,14 @@ namespace App1
     {
         List<Kredit> krediti;
         public event PropertyChangedEventHandler PropertyChanged;
+        public Uposlenik(string ime, string prezime, int jMBG, string brTel, string adresa) : base(ime, prezime, jMBG, brTel, adresa)
+        {
+
+        }
+        public Uposlenik()
+        {
+
+        }
         protected void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)

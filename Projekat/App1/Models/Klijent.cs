@@ -12,7 +12,15 @@ namespace App1
     {
         private Kredit kredit;
         private double plata;
-        private BitmapImage slika;
+        //private BitmapImage slika;
+        public Klijent (string ime, string prezime, int jMBG, string brTel, string adresa, double p) : base(ime,prezime,jMBG,brTel,adresa)
+        {
+            plata = p;
+        }
+        public Klijent()
+        {
+
+        }
         public Kredit Kredit
         {
             get { return kredit; }
@@ -25,11 +33,11 @@ namespace App1
             set { plata = value; OnPropertyChanged("Plata"); }
         }
 
-        public BitmapImage Slika
+        /*public BitmapImage Slika
         {
             get { return slika; }
             set { slika = value; OnPropertyChanged("Slika"); }
-        }
+        }*/
 
 
 

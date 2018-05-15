@@ -10,7 +10,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button Content="Prijavi se" HorizontalAlignment="Left" Margin="181,276,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Content="Registruj se" HorizontalAlignment="Left" Margin="47,276,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-
+        
         <TextBlock HorizontalAlignment="Left" Margin="47,37,0,0" Text="Mikrokreditna organizacija    NVM" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" SelectionChanged="TextBlock_SelectionChanged" Width="237"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="629,37,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBlock HorizontalAlignment="Left" Margin="51,112,0,0" Text="Korisničko ime:" TextWrapping="Wrap" VerticalAlignment="Top"/>

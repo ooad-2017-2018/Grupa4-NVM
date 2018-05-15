@@ -14,7 +14,10 @@ namespace App1
         private double iznosKamate;
         private DateTime danDizanja;
         private DateTime danVracanja;
+        public Kredit()
+        {
 
+        }
         public Uposlenik Uposlenik
         {
             get { return uposlenik; }

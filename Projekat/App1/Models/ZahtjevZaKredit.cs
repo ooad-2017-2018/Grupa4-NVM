@@ -15,7 +15,17 @@ namespace App1
         private string valuta;
 
         public event PropertyChangedEventHandler PropertyChanged;
+        public ZahtjevZaKredit()
+        {
 
+        }
+        public ZahtjevZaKredit(double g, Klijent k, int brr, string v)
+        {
+            glavnica = g;
+            klijent = k;
+            brRata = brr;
+            valuta = v;
+        }
         protected void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)
