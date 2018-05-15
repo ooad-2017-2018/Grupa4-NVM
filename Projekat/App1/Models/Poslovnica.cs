@@ -10,12 +10,12 @@ namespace App1
 {
     public class Poslovnica : INotifyPropertyChanged
     {
-        private Menager menager;
+        private Manager menager;
         private string adresa;
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         private int poslovnicaID;
         private List<Uposlenik> uposleni;
-      public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
         public Poslovnica()
         {
 
@@ -27,7 +27,7 @@ namespace App1
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-        public Menager Menager
+        public Manager Menager
         {
             get { return menager; }
             set { menager = value; OnPropertyChanged("Menager"); }

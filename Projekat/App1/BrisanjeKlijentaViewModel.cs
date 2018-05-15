@@ -46,14 +46,14 @@ namespace App1
         }
 
         public List<Klijent> ListaKlijenata { get; set; }
-        public Menager Menager { get; set; }
+        public Manager Menager { get; set; }
         public MikroKreditnaSistem Sistem { get; set; }
         public Klijent klijent { get; set; }
 
         public BrisanjeKlijentaViewModel()
         {
             ListaKlijenata = new List<Klijent>();
-            Menager = new Menager();
+            Menager = new Manager();
             Sistem = new MikroKreditnaSistem();
             klijent = new Klijent();
 

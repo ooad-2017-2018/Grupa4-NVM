@@ -37,14 +37,14 @@ namespace App1
         }
 
         
-        public Menager Menager { get; set; }
+        public Manager Menager { get; set; }
         public MikroKreditnaSistem Sistem { get; set; }
         public Poslovnica Poslovnica { get; set; }
 
         public BrisanjePoslovniceViewModel()
         {
             
-            Menager = new Menager();
+            Menager = new Manager();
             Sistem = new MikroKreditnaSistem();
             Poslovnica = new Poslovnica();
 

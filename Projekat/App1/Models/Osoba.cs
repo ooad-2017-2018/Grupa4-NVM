@@ -11,7 +11,6 @@ namespace App1
     {
         private string ime;
         private string prezime;
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         private int jmbg;
         public string fourSqaureId { get; set; }
         private string brTel;

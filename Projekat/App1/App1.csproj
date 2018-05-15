@@ -109,7 +109,8 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\Menager.cs" />
+    <Compile Include="Models\Manager.cs" />
+    <Compile Include="Models\MikroKreditnaGrupaNVM.cs" />
     <Compile Include="Models\MikroKreditNVMContext.cs" />
     <Compile Include="Models\Osoba.cs" />
     <Compile Include="Models\Poslovnica.cs" />

@@ -37,14 +37,14 @@ namespace App1
         }
 
 
-        public Menager Menager { get; set; }
+        public Manager Menager { get; set; }
         public MikroKreditnaSistem Sistem { get; set; }
         public Uposlenik Uposlenik { get; set; }
 
         public BrisanjeUposlenikaViewModel()
         {
 
-            Menager = new Menager();
+            Menager = new Manager();
             Sistem = new MikroKreditnaSistem();
             Uposlenik = new Uposlenik();
 
