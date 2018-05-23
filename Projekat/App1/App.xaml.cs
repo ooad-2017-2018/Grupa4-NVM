@@ -97,6 +97,6 @@ namespace App1
             deferral.Complete();
         }
         public static MobileServiceClient MobileService = new
-        MobileServiceClient("https://MikroKreditNVM.azurewebsites.net");
+        MobileServiceClient("https://NVMMikroKredit.azurewebsites.net");
     }
 }

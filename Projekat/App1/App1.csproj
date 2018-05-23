@@ -96,6 +96,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Baza\Bazzza.cs" />
+    <Compile Include="Baza\TabelaKlijent.cs" />
+    <Compile Include="Baza\TabelaKredit.cs" />
+    <Compile Include="Baza\TabelaManager.cs" />
+    <Compile Include="Baza\TabelaUposlenik.cs" />
+    <Compile Include="Baza\TabelaZahtjev.cs" />
     <Compile Include="BrisanjeKlijentaViewModel.cs" />
     <Compile Include="BrisanjePoslovniceViewModel.cs" />
     <Compile Include="BrisanjeUposlenikaViewModel.cs" />

@@ -12,7 +12,7 @@ namespace App1
         #region Atributi
         public List<Klijent> klijenti { get; set; }
         public List<Kredit> krediti { get; set; }
-        public List<Menager> menageri { get; set; }
+        public List<Manager> menageri { get; set; }
         public List<Poslovnica> poslovnice { get; set; }
         public List<Uposlenik> uposlenici { get; set; }
         public List<ZahtjevZaKredit> zahtjevi { get; set; }
@@ -22,14 +22,14 @@ namespace App1
         {
             klijenti = new List<Klijent>();
             krediti = new List<Kredit>();
-            menageri = new List<Menager>();
+            menageri = new List<Manager>();
             poslovnice = new List<Poslovnica>();
             uposlenici = new List<Uposlenik>();
             zahtjevi = new List<ZahtjevZaKredit>();
         }
 
         #region Konstruktor
-        public MikroKreditnaSistem(List<Klijent> klijenti, List<Kredit> krediti, List<Menager> menageri, List<Poslovnica> poslovnice, List<Uposlenik> uposlenici, List<ZahtjevZaKredit> zahtjevi)
+        public MikroKreditnaSistem(List<Klijent> klijenti, List<Kredit> krediti, List<Manager> menageri, List<Poslovnica> poslovnice, List<Uposlenik> uposlenici, List<ZahtjevZaKredit> zahtjevi)
         {
             this.klijenti = klijenti;
             this.krediti = krediti;

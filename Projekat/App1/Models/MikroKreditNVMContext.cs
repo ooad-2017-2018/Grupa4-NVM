@@ -15,7 +15,7 @@ namespace App1
     {
         public DbSet<Klijent> Klijenti { get; set; }
         public DbSet<Uposlenik> Uposlenici { get; set; }
-        public DbSet<Menager> Manageri { get; set; }
+        public DbSet<Manager> Manageri { get; set; }
         public DbSet<Kredit> Krediti { get; set; }
         public DbSet<ZahtjevZaKredit> Zahtjevi { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

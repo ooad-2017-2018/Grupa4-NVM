@@ -11,12 +11,12 @@ namespace App1
     {
         private string ime;
         private string prezime;
-        private int jmbg;
+        private string jmbg;
         public string fourSqaureId { get; set; }
         private string brTel;
         private string adresa;
 
-        public Osoba(string ime, string prezime, int jMBG, string brTel, string adresa)
+        public Osoba(string ime, string prezime, string jMBG, string brTel, string adresa)
         {
             Ime = ime;
             Prezime = prezime;
@@ -38,7 +38,7 @@ namespace App1
             get { return prezime; }
             set { prezime = value; }
         }
-        public int JMBG
+        public string JMBG
         {
             get { return jmbg; }
             set { jmbg = value; }

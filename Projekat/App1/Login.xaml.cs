@@ -24,8 +24,9 @@ namespace App1
     {
         public MainPage()
         {
+            Bazzza.registrujKlijenta("1406997190017","Mirza","Delic","Travnicka cesta 44","387603083506",0);
             this.InitializeComponent();
-
+            
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)

@@ -13,7 +13,7 @@ namespace App1
         private Kredit kredit;
         private double plata;
         //private BitmapImage slika;
-        public Klijent (string ime, string prezime, int jMBG, string brTel, string adresa, double p) : base(ime,prezime,jMBG,brTel,adresa)
+        public Klijent (string ime, string prezime, string jMBG, string brTel, string adresa, double p) : base(ime,prezime,jMBG,brTel,adresa)
         {
             plata = p;
         }
