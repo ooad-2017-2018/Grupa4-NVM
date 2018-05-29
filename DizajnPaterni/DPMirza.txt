@@ -1,0 +1,13 @@
+-SINGLETON PATERN
+Singleton patern nam omogucava da imamo klasu koja se moze instancirati samo jednom i da pri tome imamo globalni pristup toj jedinstvenoj instanci klase. Dakle ovo je korisno kada nam je potreban jedan objekat koji ce koordinisati radom odredjenih funkcionalnosti naseg sistema. U sustini, u nasoj singleton klasi "sakrivamo" konstruktor te implementiramo metodu dajInstancu() koja ce nam uvijek vracati jednu te istu instancu klase.
+Konkretno u nasem projektu korisno bi bilo iskoristiti ovaj patern za kontejnersku klasu u kojoj cuvamo liste klijenata, uposlenika, poslovnicaa, ...
+
+-FACTORY METHOD PATERN
+Uloga Factory Method paterna je da omoguci kreiranje objekata na nacin da podklase odluce koju klasu instancirati. Razlicite podklase mogu na razlicite nacine implementirati interfejs.
+Factory Method instancira odgovarajucu podklasu(izvedenu klasu) preko posebne metode na osnovu informacije od strane klijenta ili na osnovu tekuceg stanja.
+U nasem projektu ovaj patern smo mogli iskoristiti prilikom kreiranja osoba ( klijenata, uposlenika ) tako da uvijek pozivamo istu metodu, npr. kreirajOsobu() a da podklasa automatski kreira klijenta ili uposlenika u ovisnosti od doba dana (npr. klijenti se kreiraju 9-17 a inace uposlenici).
+
+-ITERATOR PATERN
+Iterator patern omogucava sekvencijalni pristup elementima kolekcije bez poznavanja kako je kolekcija strukturirana.
+Ovaj dizajn patern mozemo implementirati tako da omogucimo pristup bilo kojoj od kolekcija klijenata, uposlenika, managera ili poslovnica.
+
