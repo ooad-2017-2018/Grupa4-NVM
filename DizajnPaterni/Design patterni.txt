@@ -1,0 +1,12 @@
+-State design pattern
+Mijenja naèin ponašanja objekata na osnovu trenutnog stanja.
+Konkretno ako korisnik ima kredit ne može poslati molbu za novi.
+
+-Prototype design pattern
+Specificira vrste objekata za kreiranje koristeæi prototip instance, i kreira nove objekte koristeæu ovaj prototip (kopirajuæi ga).
+Ovaj design pattern nije korišten u našem projektu ali bi se mogao upotrijebiti npr. za uposlenike.
+
+-Object pool design pattern
+Oodp se koristi u sluèaju da moramo èuvati mnogo podataka, ali je memorija ogranièena. Tada se stari objekti mogu zamijeniti novima, umjesto da alociramo prostor za nove objekte.
+Primjer: Kada se kredit otplati instanca tog kredita se može zamijeniti novim kreditom.
+
