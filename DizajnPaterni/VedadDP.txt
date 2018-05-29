@@ -1,0 +1,29 @@
+1.Decorator patern
+ Osnovna namjena Decorator paterna je da omoguæi dinamièko dodavanje novih elemenata i funkcionalnosti postojeæim objektima.
+ Decorator patern se koristi i kada postojeæe klase komponenti nisu podesne za podklase, 
+npr. nisu raspoložive ili bi rezultiralo u mnogo podklasa(npr. pizza sa kecapom ili bez itd.) Objekat pri tome nezna da je uraðena dekoracija što je veoma korisno za 
+iskoristljivost i ponovnu upotrebu komponenti softverskog sistema. 
+Decorator patern se ne oslanja na èisto nasljeðivanje prilikom dodavanja novih atributa i ponašanja. 
+Decorator patern nasljeðuje originalnu klasu i sadrži instancu originalne klase.
+ Postojeæi objekti se ne mijenjaju veæ se kreiraju novi. To se postiže sa Decorator klasom koja ukljuèuje dva tipa relacija 
+sa IComponent interfejsom: Decorator realizira IComponent interfejs (isprekidanim strelicama ili nasljeðivanjem), Decorator je povezan 
+kompozicijom sa IComponent interfejsom. To znaèi da Decorator instancira jedan ili više IComponent objekata i 'decorate' objekte – ukljuèuje nove 
+operacije i override postojeæe.
+
+ Iskorišteno u projektu?
+
+ Nije, ali bi ga mogli iskoristiti, ako bi uveli moguænost grejsPerioda( ili neèega sliènog). Ne bi morali praviti novu klasu. 
+
+2. Adapter patern
+Osnovna namjena Adapter paterna je da omoguci širu upotrebu vec postojecih klasa. 
+Adapter patern kreira novu adapter klasu koja služi kao posrednik izmedu originalne klase i željenog interfejsa.
+ Tim postupkom se dobija željena funkcionalnost bez izmjena na originalnoj klasi i bez ugrožavanja integriteta cijele aplikacije.
+
+Iskorrišteno u projektu?
+Nije, ako bi zeljeli dodati nove funkcionalnosti mogli bi koristit i adapter klasu, da ne radimo modifikacije koda, nego njegovo proširenje
+
+3. Observer patern
+Uloga Observer paterna je da uspostavi relaciju izmedu objekata tako kada jedan objekat promijeni stanje, drugi zainteresirani objekti se obavještavaju.
+
+Iskoristeno u projektu?
+Nije, ali bi mogli koristit da omogucimo da promjena kursne liste utice na ratu kredita. 
