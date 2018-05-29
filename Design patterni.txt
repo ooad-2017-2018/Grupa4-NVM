@@ -1,0 +1,21 @@
+-State design pattern
+Mijenja naèin ponašanja objekata na osnovu trenutnog stanja.
+Konkretno ako korisnik ima kredit ne može poslati molbu za novi.
+
+-Singleton design pattern
+Osigurava da klasa može imati samo jednu istancu i osigurava globalni pristup toj instanci.
+Najbolji primjer je kontejnerska klasa za sve objekte (mikrokreditna org.).
+
+-Prototype design pattern
+Specificira vrste objekata za kreiranje koristeæi prototip instance, i kreira nove objekte koristeæu ovaj prototip (kopirajuæi ga).
+Ovaj design pattern nije korišten u našem projektu ali bi se mogao upotrijebiti npr. za uposlenike.
+
+-Object pool design pattern
+Oodp se koristi u sluèaju da moramo èuvati mnogo podataka, ali je memorija ogranièena. Tada se stari objekti mogu zamijeniti novima, umjesto da alociramo prostor za nove objekte.
+Primjer: Kada se kredit otplati instanca tog kredita se može zamijeniti novim kreditom.
+
+-Private class data pattern
+Se koristi da bi onemoguæili izmjenu instanci neke klase. Atributi te klase mogu se mijenjati samo prilikom instanciranja te klase.
+
+-Strategy pattern
+Izdvaja algoritme iz bazne klase i ukljuèuje ih u posebne klase. Pogodan je ako postoje razlièite primjene algoritama za neki problem. Da se razlikuje otplata kredita na 6 i 12 mjeseci ovaj pattern bi mogli iskoristiti.
