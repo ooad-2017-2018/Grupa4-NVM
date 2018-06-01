@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using App1.Models;
 using Microsoft.WindowsAzure.MobileServices;
 
 namespace App1
@@ -100,6 +102,51 @@ namespace App1
             {
                 throw;
             }
+        }
+        public static async void dajKlijenta()
+        {
+            try
+            {
+                IMobileServiceTable<TabelaKlijent> TabelaKlijent = App.MobileService.GetTable<TabelaKlijent>();
+                /*IEnumerable<TabelaKlijent> Klijent = await TabelaKlijent.ReadAsync();
+                ITotalCountProvider prov = (ITotalCountProvider)Klijent;
+
+                long count = ((ITotalCountProvider)Klijent).TotalCount;
+                Debug.WriteLine("Broj upisanih klijenata 1 : " + count.ToString());
+                foreach (var element in Klijent)
+                {
+                    MikroKreditnaGrupaNVM.listaKlijenata.Add(new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata));
+                    
+                }*/
+                IMobileServiceTableQuery<TabelaKlijent> query = TabelaKlijent.Where(p => p.plata >= 0).IncludeTotalCount();
+                IEnumerable<TabelaKlijent> Klijenti = await query.ToEnumerableAsync();
+                ITotalCountProvider prov2 = (ITotalCountProvider)Klijenti;
+
+                long count2 = ((ITotalCountProvider)Klijenti).TotalCount;
+                Debug.WriteLine("Broj upisanih klijenata 2 : " + count2.ToString());
+                foreach (var element in Klijenti)
+                {
+                    //return new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata);
+                    MikroKreditnaGrupaNVM.listaKlijenata.Add(new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata));
+                    Klijent k = new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata);
+                    Debug.WriteLine("Broj upisanih klijenata : " + k.ispisiKlijenta());
+
+                }
+                var films = await (from a in TabelaKlijent select a).ToListAsync();
+                foreach (TabelaKlijent film in films)
+                {
+                    MikroKreditnaGrupaNVM.listaKlijenata.Add(new Klijent(film.ime,film.prezime, film.id,film.brTel,film.adresa,film.plata));
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+
+            //return new Klijent(); // nece se nikada izvrsiti
+
+
         }
     }
 }

@@ -50,7 +50,12 @@ namespace App1
             }
         }
 
-
+        public string ispisiKlijenta()
+        {
+            string s = "";
+            s += Ime + " " + Prezime + " " + JMBG + " " + Adresa + " " + BrTel;
+            return s;
+        }
 
     }
 }
