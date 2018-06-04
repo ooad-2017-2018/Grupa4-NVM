@@ -103,49 +103,101 @@ namespace App1
                 throw;
             }
         }
-        public static async void dajKlijenta()
+        public static async void dajKlijente()
         {
             try
             {
-                IMobileServiceTable<TabelaKlijent> TabelaKlijent = App.MobileService.GetTable<TabelaKlijent>();
-                /*IEnumerable<TabelaKlijent> Klijent = await TabelaKlijent.ReadAsync();
-                ITotalCountProvider prov = (ITotalCountProvider)Klijent;
-
-                long count = ((ITotalCountProvider)Klijent).TotalCount;
-                Debug.WriteLine("Broj upisanih klijenata 1 : " + count.ToString());
-                foreach (var element in Klijent)
+                var lista = App.MobileService.GetTable<TabelaKlijent>();
+                var listatmp = await lista.ToListAsync();
+                Debug.WriteLine("Broj dobavljenih : "+listatmp.Count());
+                foreach (var element in listatmp)
                 {
-                    MikroKreditnaGrupaNVM.listaKlijenata.Add(new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata));
-                    
-                }*/
-                IMobileServiceTableQuery<TabelaKlijent> query = TabelaKlijent.Where(p => p.plata >= 0).IncludeTotalCount();
-                IEnumerable<TabelaKlijent> Klijenti = await query.ToEnumerableAsync();
-                ITotalCountProvider prov2 = (ITotalCountProvider)Klijenti;
-
-                long count2 = ((ITotalCountProvider)Klijenti).TotalCount;
-                Debug.WriteLine("Broj upisanih klijenata 2 : " + count2.ToString());
-                foreach (var element in Klijenti)
-                {
-                    //return new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata);
                     MikroKreditnaGrupaNVM.listaKlijenata.Add(new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata));
                     Klijent k = new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata);
                     Debug.WriteLine("Broj upisanih klijenata : " + k.ispisiKlijenta());
-
                 }
-                var films = await (from a in TabelaKlijent select a).ToListAsync();
-                foreach (TabelaKlijent film in films)
-                {
-                    MikroKreditnaGrupaNVM.listaKlijenata.Add(new Klijent(film.ime,film.prezime, film.id,film.brTel,film.adresa,film.plata));
-                }
+            
             }
             catch (Exception e)
             {
                 throw;
             }
 
+        }
+        public static async void dajKredite()
+        {
+            try
+            {
+                var lista = App.MobileService.GetTable<TabelaKredit>();
+                var listatmp = await lista.ToListAsync();
+                Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());
+                foreach (var element in listatmp)
+                {
+                    MikroKreditnaGrupaNVM.listaKredita.Add(new Kredit(element.VratitiNovca, element.IznosKamate, element.IdKlijenta, element.IdUposlenika, element.DatumDizanja, element.DatumVracanja));
+                }
 
-            //return new Klijent(); // nece se nikada izvrsiti
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
 
+        }
+        public static async void dajUposlene()
+        {
+            try
+            {
+                var lista = App.MobileService.GetTable<TabelaUposlenik>();
+                var listatmp = await lista.ToListAsync();
+                Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());
+                foreach (var element in listatmp)
+                {
+                    MikroKreditnaGrupaNVM.listaUposlenika.Add(new Uposlenik(element.ime, element.prezime, element.id, element.brTel, element.adresa));
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+        }
+        public static async void dajManagere()
+        {
+            try
+            {
+                var lista = App.MobileService.GetTable<TabelaManager>();
+                var listatmp = await lista.ToListAsync();
+                Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());
+                foreach (var element in listatmp)
+                {
+                    MikroKreditnaGrupaNVM.listaManagera.Add(new Manager(element.ime, element.prezime, element.id, element.brTel, element.adresa));
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+        }
+        public static async void dajZahtjeve()
+        {
+            try
+            {
+                var lista = App.MobileService.GetTable<TabelaZahtjev>();
+                var listatmp = await lista.ToListAsync();
+                Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());
+                foreach (var element in listatmp)
+                {
+                    MikroKreditnaGrupaNVM.listaZahtjeva.Add(new ZahtjevZaKredit(element.Glavnica, element.IdKlijenta, element.BrojRata, element.Valuta));
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
 
         }
     }

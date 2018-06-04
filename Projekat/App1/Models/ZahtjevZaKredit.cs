@@ -11,6 +11,7 @@ namespace App1
     {
         private double glavnica;
         private Klijent klijent;
+        private string idklijenta;
         private int brRata;
         private string valuta;
 
@@ -19,10 +20,10 @@ namespace App1
         {
 
         }
-        public ZahtjevZaKredit(double g, Klijent k, int brr, string v)
+        public ZahtjevZaKredit(double g, string idk, int brr, string v)
         {
             glavnica = g;
-            klijent = k;
+            idklijenta = idk;
             brRata = brr;
             valuta = v;
         }
