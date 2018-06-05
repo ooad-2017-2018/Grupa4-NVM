@@ -172,6 +172,7 @@ namespace App1
         {
             try
             {
+                MikroKreditnaGrupaNVM.listaUposlenika.Clear();
                 var lista = App.MobileService.GetTable<TabelaUposlenik>();
                 var listatmp = await lista.ToListAsync();
                 Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());
@@ -192,6 +193,7 @@ namespace App1
         {
             try
             {
+                MikroKreditnaGrupaNVM.listaManagera.Clear();
                 var lista = App.MobileService.GetTable<TabelaManager>();
                 var listatmp = await lista.ToListAsync();
                 Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());
@@ -231,6 +233,7 @@ namespace App1
         {
             try
             {
+                MikroKreditnaGrupaNVM.listaPoslovnica.Clear();
                 var lista = App.MobileService.GetTable<TabelaPoslovnica>();
                 var listatmp = await lista.ToListAsync();
                 Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());

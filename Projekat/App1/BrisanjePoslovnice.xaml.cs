@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App1.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,6 +27,11 @@ namespace App1
         {
             this.InitializeComponent();
             RWM = new BrisanjePoslovniceViewModel();
+            lista.
+            foreach (Poslovnica k in MikroKreditnaGrupaNVM.listaPoslovnica)
+            {
+                lista.Items.Add(k.Adresa);
+            }
         }
 
 
@@ -43,6 +49,11 @@ namespace App1
                 Frame.Navigate(typeof(MainPage));
             }
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Bazzza.obrisiPoslovnicu(MikroKreditnaGrupaNVM.listaPoslovnica[lista.SelectedIndex].PoslovnicaID);
         }
     }
 }

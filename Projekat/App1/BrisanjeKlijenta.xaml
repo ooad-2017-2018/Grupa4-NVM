@@ -14,11 +14,9 @@
             </CommandBar.Content>
             <AppBarButton Icon="Back" Label="Nazad"/>
         </CommandBar>
-        <ListBox x:Name="lista" HorizontalAlignment="Left" Height="236" Margin="26,91,0,0" VerticalAlignment="Top" Width="289"/>
+        <ListBox x:Name="lista" HorizontalAlignment="Left" Height="236" Margin="26,91,0,0" VerticalAlignment="Top" Width="289" SelectionChanged="lista_SelectionChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="26,53,0,0" Text="Lista klijenata:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.136,-1.23"/>
-        <TextBlock HorizontalAlignment="Left" Margin="26,379,0,0" Text="ID klijenta:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.519,0.56"/>
-        <TextBox HorizontalAlignment="Left" Margin="129,367,0,0" Text="TextBox" VerticalAlignment="Top" Width="136"/>
-        <Button Content="Obriši" HorizontalAlignment="Left" Margin="140,445,0,0" VerticalAlignment="Top"/>
+        <Button Content="Obriši" HorizontalAlignment="Left" Margin="140,445,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Content="Nazad" x:Name="nazad" Click="nazad_Click_1" HorizontalAlignment="Left" Margin="74,526,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

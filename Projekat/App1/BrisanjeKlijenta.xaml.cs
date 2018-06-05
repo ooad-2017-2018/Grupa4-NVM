@@ -29,7 +29,7 @@ namespace App1
             RWM = new BrisanjeKlijentaViewModel();
            
             foreach (Klijent k in MikroKreditnaGrupaNVM.listaKlijenata) {
-                lista.Items.Add(k.Ime);
+                lista.Items.Add(k.Username);
             }
         }
 
@@ -53,6 +53,16 @@ namespace App1
         private void nazad_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Bazzza.obrisiKlijenta(lista.SelectedItem.ToString());
+        }
+
+        private void lista_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }

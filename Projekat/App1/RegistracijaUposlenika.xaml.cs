@@ -53,11 +53,11 @@ namespace App1
         {
             if (od==1)
             {
-                Bazzza.registrujUposlenika(jmbg.Text, ime.Text, prezime.Text, adresa.Text, brojtelefona.Text, "", "");
+                Bazzza.registrujUposlenika(jmbg.Text, ime.Text, prezime.Text, adresa.Text, brojtelefona.Text, user.Text, pw.Text);
                 Debug.Write("evo");
             }
             else {
-                Bazzza.registrujManagera(jmbg.Text, ime.Text, prezime.Text, adresa.Text, brojtelefona.Text, "", "");
+                Bazzza.registrujManagera(jmbg.Text, ime.Text, prezime.Text, adresa.Text, brojtelefona.Text, user.Text, pw.Text);
 
             }
         }

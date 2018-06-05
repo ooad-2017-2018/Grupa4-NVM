@@ -22,7 +22,7 @@ namespace App1
 {
     public sealed partial class BrisanjeUposlenika : Page
     {
-        int i = 0;
+        int i = 0,k=0;
         BrisanjeUposlenikaViewModel RWM;
         public BrisanjeUposlenika()
         {
@@ -49,6 +49,7 @@ namespace App1
 
         private void upo1_Checked(object sender, RoutedEventArgs e)
         {
+            k = 1;
             lista.Items.Clear();
             Debug.Write(MikroKreditnaGrupaNVM.listaUposlenika.Count());
             foreach (Uposlenik k in MikroKreditnaGrupaNVM.listaUposlenika)
@@ -59,13 +60,24 @@ namespace App1
 
         private void men1_Checked(object sender, RoutedEventArgs e)
         {
-
+            k = 2;
             lista.Items.Clear();
 
             Debug.Write(MikroKreditnaGrupaNVM.listaManagera.Count());
             foreach (Manager k in MikroKreditnaGrupaNVM.listaManagera)
             {
                 lista.Items.Add(k.Ime);
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (k == 1)
+            {
+                Bazzza.obrisiUposlenika(lista.SelectedItem.ToString());
+            }
+            else if (k == 2) {
+                Bazzza.obrisiManagera(lista.SelectedItem.ToString());
             }
         }
     }

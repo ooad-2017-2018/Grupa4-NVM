@@ -34,6 +34,10 @@ namespace App1
 
             Bazzza.dajUposlene();
             Bazzza.dajManagere();
+
+            Bazzza.dajPoslovnice();
+
+         
         }
 
         private void rkl_Click(object sender, RoutedEventArgs e)

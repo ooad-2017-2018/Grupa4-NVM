@@ -39,12 +39,12 @@
         <TextBlock HorizontalAlignment="Left" Margin="32,70,0,0" Text="Adresa:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,112,0,0" Text="Lokacija:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="63,31,0,0" Text="ID:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="102,31,0,0" Text="generisani ID" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="102,70,0,0" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="adre" HorizontalAlignment="Left" Margin="102,70,0,0" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="id" HorizontalAlignment="Left" Margin="102,24,0,0" Text="TextBox" VerticalAlignment="Top" Width="87"/>
 
-        <Custom:MapControl x:Name="mapa" HorizontalAlignment="Left" Margin="63,154,0,0" VerticalAlignment="Top" Height="237" Width="240"/>
-        <Button x:Name="registrujPoslovnicu" Content="Registruj poslovnicu" HorizontalAlignment="Left" Margin="100,450,0,0" VerticalAlignment="Top"/>
-        <Button Content="Nazad" x:Name="nazad" Click="nazad_Click_1" HorizontalAlignment="Left" Margin="63,658,0,0" VerticalAlignment="Top"/>
+        <Custom:MapControl x:Name="mapa" HorizontalAlignment="Left" Margin="107,118,0,0" VerticalAlignment="Top" Height="335" Width="648"/>
+        <Button x:Name="registrujPoslovnicu" Content="Registruj poslovnicu" HorizontalAlignment="Left" Margin="395,516,0,0" VerticalAlignment="Top" Click="registrujPoslovnicu_Click"/>
+        <Button Content="Nazad" x:Name="nazad" Click="nazad_Click_1" HorizontalAlignment="Left" Margin="176,516,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

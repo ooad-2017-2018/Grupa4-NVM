@@ -16,9 +16,7 @@
         </CommandBar>
         <ListBox x:Name="lista" HorizontalAlignment="Left" Height="236" Margin="26,91,0,0" VerticalAlignment="Top" Width="289"/>
         <TextBlock HorizontalAlignment="Left" Margin="26,53,0,0" Text="Lista uposlenika:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.136,-1.23"/>
-        <TextBlock HorizontalAlignment="Left" Margin="26,379,0,0" Text="ID uposlenika:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.519,0.56"/>
-        <TextBox HorizontalAlignment="Left" Margin="129,367,0,0" Text="TextBox" VerticalAlignment="Top" Width="136"/>
-        <Button Content="Obriši" HorizontalAlignment="Left" Margin="140,445,0,0" VerticalAlignment="Top"/>
+        <Button Content="Obriši" HorizontalAlignment="Left" Margin="140,445,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Content="Nazad" x:Name="nazad" Click="nazad_Click_1" HorizontalAlignment="Left" Margin="74,526,0,0" VerticalAlignment="Top"/>
         <StackPanel HorizontalAlignment="Left" Height="61" Margin="359,199,0,0" VerticalAlignment="Top" Width="232">
             <RadioButton Checked="upo1_Checked" x:Name="upo1" Content="Uposlenik" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="52"/>
