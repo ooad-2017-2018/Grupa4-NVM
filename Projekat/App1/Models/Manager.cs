@@ -12,7 +12,7 @@ namespace App1
         {
 
         }
-        public Manager(string ime, string prezime, string jMBG, string brTel, string adresa) : base(ime, prezime, jMBG, brTel, adresa)
+        public Manager(string ime, string prezime, string jMBG, string brTel, string adresa, string un, string pass) : base(ime, prezime, jMBG, brTel, adresa, un, pass)
         {
 
         }

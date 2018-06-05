@@ -14,6 +14,7 @@ namespace App1
         private string idUposlenika;
         private DateTime datumDizanja;
         private DateTime datumVracanja;
+        private string id;
         public double VratitiNovca
         {
             get { return vratitiNovca; }
@@ -37,5 +38,6 @@ namespace App1
 
         public DateTime DatumDizanja { get => datumDizanja; set => datumDizanja = value; }
         public DateTime DatumVracanja { get => datumVracanja; set => datumVracanja = value; }
+        public string Id { get => id; set => id = value; }
     }
 }

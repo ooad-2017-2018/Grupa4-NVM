@@ -12,6 +12,7 @@ namespace App1
         private int brojRata;
         private string idKlijenta;
         private string valuta;
+        private string id;
         public double Glavnica
         {
             get { return glavnica; }
@@ -32,5 +33,7 @@ namespace App1
             get { return valuta; }
             set { valuta = value; }
         }
+
+        public string Id { get => id; set => id = value; }
     }
 }

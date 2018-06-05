@@ -13,7 +13,7 @@ namespace App1
         private Kredit kredit;
         private double plata;
         //private BitmapImage slika;
-        public Klijent (string ime, string prezime, string jMBG, string brTel, string adresa, double p) : base(ime,prezime,jMBG,brTel,adresa)
+        public Klijent (string ime, string prezime, string jMBG, string brTel, string adresa, double p,string un, string pass) : base(ime,prezime,jMBG,brTel,adresa,un,pass)
         {
             plata = p;
         }
@@ -53,7 +53,7 @@ namespace App1
         public string ispisiKlijenta()
         {
             string s = "";
-            s += Ime + " " + Prezime + " " + JMBG + " " + Adresa + " " + BrTel;
+            s += Ime + " " + Prezime + " " + JMBG + " " + Adresa + " " + BrTel+" "+Username+" "+Password;
             return s;
         }
 

@@ -43,7 +43,7 @@ namespace App1
 
         private void registruj_Click(object sender, RoutedEventArgs e)
         {
-            Bazzza.registrujKlijenta(jmbg.Text, ime.Text, prezime.Text, adresa.Text, brojtelefona.Text,Convert.ToDouble( plata.Text));
+            Bazzza.registrujKlijenta(jmbg.Text, ime.Text, prezime.Text, adresa.Text, brojtelefona.Text,Convert.ToDouble( plata.Text),"","");
         }
 
         private void slikica_Click(object sender, RoutedEventArgs e)

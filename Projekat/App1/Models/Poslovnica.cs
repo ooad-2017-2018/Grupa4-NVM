@@ -13,12 +13,17 @@ namespace App1
         private Manager menager;
         private string adresa;
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        private int poslovnicaID;
+        private string poslovnicaID;
         private List<Uposlenik> uposleni;
         public event PropertyChangedEventHandler PropertyChanged;
         public Poslovnica()
         {
 
+        }
+        public Poslovnica(string id, string adr)
+        {
+            poslovnicaID = id;
+            adresa = adr;
         }
         protected void OnPropertyChanged(string propertyName)
         {
@@ -38,7 +43,7 @@ namespace App1
             get { return adresa; }
             set { adresa = value; }
         }
-        public int PoslovnicaID
+        public string PoslovnicaID
         {
             get { return poslovnicaID; }
             set { poslovnicaID = value; }

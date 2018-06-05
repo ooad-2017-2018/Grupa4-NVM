@@ -11,7 +11,7 @@ namespace App1
 {
     public class Bazzza
     {
-        public static async void registrujKlijenta(string jmbg, string ime, string prezime, string adresa, string brTel, double plata)
+        public static async void registrujKlijenta(string jmbg, string ime, string prezime, string adresa, string brTel, double plata, string un, string pass)
         {
             IMobileServiceTable<TabelaKlijent> Klijenti = App.MobileService.GetTable<TabelaKlijent>();
             TabelaKlijent tk = new TabelaKlijent();
@@ -21,6 +21,8 @@ namespace App1
             tk.adresa = adresa;
             tk.brTel = brTel;
             tk.plata = plata;
+            tk.username = un;
+            tk.password = pass;
             try
             {
                 await Klijenti.InsertAsync(tk);
@@ -31,7 +33,7 @@ namespace App1
                 throw;
             }
         }
-        public static async void registrujUposlenika(string jmbg, string ime, string prezime, string adresa, string brTel)
+        public static async void registrujUposlenika(string jmbg, string ime, string prezime, string adresa, string brTel, string un, string pass)
         {
             IMobileServiceTable<TabelaUposlenik> Uposlenici = App.MobileService.GetTable<TabelaUposlenik>();
             TabelaUposlenik tu = new TabelaUposlenik();
@@ -40,6 +42,8 @@ namespace App1
             tu.prezime = prezime;
             tu.adresa = adresa;
             tu.brTel = brTel;
+            tu.username = un;
+            tu.password = pass;
             try
             {
                 await Uposlenici.InsertAsync(tu);
@@ -49,7 +53,7 @@ namespace App1
                 throw;
             }
         }
-        public static async void registrujManagera(string jmbg, string ime, string prezime, string adresa, string brTel)
+        public static async void registrujManagera(string jmbg, string ime, string prezime, string adresa, string brTel, string un, string pass)
         {
             IMobileServiceTable<TabelaManager> Manageri = App.MobileService.GetTable<TabelaManager>();
             TabelaManager tm = new TabelaManager();
@@ -58,6 +62,8 @@ namespace App1
             tm.prezime = prezime;
             tm.adresa = adresa;
             tm.brTel = brTel;
+            tm.username = un;
+            tm.password = pass;
             try
             {
                 await Manageri.InsertAsync(tm);
@@ -79,6 +85,22 @@ namespace App1
             try
             {
                 await Zahtjevi.InsertAsync(tz);
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+        }
+        public static async void registrujPoslovnicu(string id, string adresa)
+        {
+            IMobileServiceTable<TabelaPoslovnica> Poslovnice = App.MobileService.GetTable<TabelaPoslovnica>();
+            TabelaPoslovnica tz = new TabelaPoslovnica();
+            tz.id = id;
+            tz.adresa = adresa;
+
+            try
+            {
+                await Poslovnice.InsertAsync(tz);
             }
             catch (Exception e)
             {
@@ -115,8 +137,8 @@ namespace App1
                 foreach (var element in listatmp)
                 {
 
-                    MikroKreditnaGrupaNVM.listaKlijenata.Add(new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata));
-                    Klijent k = new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata);
+                    MikroKreditnaGrupaNVM.listaKlijenata.Add(new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata,element.username,element.password));
+                    Klijent k = new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata,element.username,element.password);
                     Debug.WriteLine("Broj upisanih klijenata : " + k.ispisiKlijenta());
                 }
                 Debug.WriteLine("Broj upisanih klijenata : " + MikroKreditnaGrupaNVM.listaKlijenata.Count());
@@ -156,7 +178,7 @@ namespace App1
                 MikroKreditnaGrupaNVM.listaUposlenika.Clear();
                 foreach (var element in listatmp)
                 {
-                    MikroKreditnaGrupaNVM.listaUposlenika.Add(new Uposlenik(element.ime, element.prezime, element.id, element.brTel, element.adresa));
+                    MikroKreditnaGrupaNVM.listaUposlenika.Add(new Uposlenik(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.username, element.password));
                 }
 
             }
@@ -176,7 +198,7 @@ namespace App1
                 MikroKreditnaGrupaNVM.listaManagera.Count();
                 foreach (var element in listatmp)
                 {
-                    MikroKreditnaGrupaNVM.listaManagera.Add(new Manager(element.ime, element.prezime, element.id, element.brTel, element.adresa));
+                    MikroKreditnaGrupaNVM.listaManagera.Add(new Manager(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.username, element.password));
                 }
 
             }
@@ -201,6 +223,157 @@ namespace App1
             }
             catch (Exception e)
             {
+                throw;
+            }
+
+        }
+        public static async void dajPoslovnice()
+        {
+            try
+            {
+                var lista = App.MobileService.GetTable<TabelaPoslovnica>();
+                var listatmp = await lista.ToListAsync();
+                Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());
+                foreach (var element in listatmp)
+                {
+                    MikroKreditnaGrupaNVM.listaPoslovnica.Add(new Poslovnica(element.id, element.adresa));
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+        }
+        public static async void obrisiKlijenta(string p)
+        {
+            try
+            {
+                var lista = App.MobileService.GetTable<TabelaKlijent>();
+                var listatmp = await lista.ToListAsync();
+                
+                foreach (var element in listatmp)
+                {
+                    if (element.username.Equals(p))
+                    {
+                        await lista.DeleteAsync(element);
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine("Greska");
+                throw;
+            }
+
+        }
+        public static async void obrisiUposlenika(string p)
+        {
+            try
+            {
+                var lista = App.MobileService.GetTable<TabelaUposlenik>();
+                var listatmp = await lista.ToListAsync();
+
+                foreach (var element in listatmp)
+                {
+                    if (element.username.Equals(p))
+                    {
+                        await lista.DeleteAsync(element);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Greska");
+                throw;
+            }
+
+        }
+        public static async void obrisiManagera(string p)
+        {
+            try
+            {
+                var lista = App.MobileService.GetTable<TabelaManager>();
+                var listatmp = await lista.ToListAsync();
+
+                foreach (var element in listatmp)
+                {
+                    if (element.username.Equals(p))
+                    {
+                        await lista.DeleteAsync(element);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Greska");
+                throw;
+            }
+
+        }
+        public static async void obrisiZahtjev(string p)
+        {
+            try
+            {
+                var lista = App.MobileService.GetTable<TabelaZahtjev>();
+                var listatmp = await lista.ToListAsync();
+
+                foreach (var element in listatmp)
+                {
+                    if (element.Id.Equals(p))
+                    {
+                        await lista.DeleteAsync(element);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Greska");
+                throw;
+            }
+
+        }
+        public static async void obrisiKredit(string p)
+        {
+            try
+            {
+                var lista = App.MobileService.GetTable<TabelaKredit>();
+                var listatmp = await lista.ToListAsync();
+
+                foreach (var element in listatmp)
+                {
+                    if (element.Id.Equals(p))
+                    {
+                        await lista.DeleteAsync(element);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Greska");
+                throw;
+            }
+
+        }
+        public static async void obrisiPoslovnicu(string p)
+        {
+            try
+            {
+                var lista = App.MobileService.GetTable<TabelaPoslovnica>();
+                var listatmp = await lista.ToListAsync();
+
+                foreach (var element in listatmp)
+                {
+                    if (element.id.Equals(p))
+                    {
+                        await lista.DeleteAsync(element);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Greska");
                 throw;
             }
 

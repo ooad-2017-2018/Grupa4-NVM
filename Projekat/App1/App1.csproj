@@ -104,6 +104,7 @@
     <Compile Include="Baza\TabelaKlijent.cs" />
     <Compile Include="Baza\TabelaKredit.cs" />
     <Compile Include="Baza\TabelaManager.cs" />
+    <Compile Include="Baza\TabelaPoslovnica.cs" />
     <Compile Include="Baza\TabelaUposlenik.cs" />
     <Compile Include="Baza\TabelaZahtjev.cs" />
     <Compile Include="BrisanjeKlijenta.xaml.cs">

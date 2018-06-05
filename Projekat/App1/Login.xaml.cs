@@ -27,7 +27,7 @@ namespace App1
         public static int sb=0;
         public MainPage()
         {
-            
+
             
             this.InitializeComponent();
             lwm = new LoginViewModel();
