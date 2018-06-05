@@ -1,0 +1,31 @@
+Tim je uradio 3 refaktoringa u kodu koji su unaprijedili i pojednostavili samo implementaciju naseg koda.
+
+
+
+Refaktoring pomocu dizajn paterna
+
+
+
+Prvi refaktoring pripada grupi kreacijskih paterna te ukljucuje implementaciju Singleton paterna,
+gdje smo nasu staticku kontejnersku klasu Bazzza napravili po singleton principu gdje smo sakrili kontruktor te klase 
+a pozivamo je preko metode dajBazzzu();
+
+
+Drugi refaktoring pripada grupi strukturalnih paterna i predstavlja implementaciju Proxy paterna,
+zbog osjetljivosti materije, bitno je da se administratorkse opcije jasno definisu i da zabranimo sve neautorizovane pokusaje
+registracije kredita, zahtjeva, novih osoba i slicno.
+
+
+Na kraju, treci refaktoring pomocu dizajn paterna je iz grupe paterna ponasanja.
+Iskoristen je Null object patern gdje smo onemogucili pojavu null referenci tako sto smo osigurali da se uvijek vraca
+default verzija objekta.
+
+
+
+Generalni refaktoring ukljucuje mijenjanje svih "magicnih konstanti" sa varijablama. Refaktoring je uradjen po uzoru na slican primjer
+sa predavanja, te smo time olaksali svaku promjenu konstanti, tj. umjesto da na svakom mjestu gdje se konstanta koristi nju mijenjamo
+ovako samo trebamo promijeniti vrijednost varijable. Ubaceni su try catch blokovi radi povecane sigurnosti i lakse obrade izuzetaka.
+Upotrebom gotovih metoda izbjegavamo bespotrebno koristenje petlji. Polimorfizmom smo postigli da smo smanjili koristenje if-ova.
+Takodjer koristenjem privremenih varijabli smo osigurali citljiviji kod i zastitili se od odredjenih gresaka.
+Umjesto korsistenja nekih indikatora da se desila greska, koristili smo (bacali smo) izuzetke sa odgovarajucom porukom.
+
