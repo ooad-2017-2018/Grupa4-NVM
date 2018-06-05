@@ -19,5 +19,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="26,391,0,0" Text="ID poslovnice:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.519,0.56"/>
         <TextBox HorizontalAlignment="Left" Margin="140,379,0,0" Text="TextBox" VerticalAlignment="Top" Width="136"/>
         <Button Content="Obriši" HorizontalAlignment="Left" Margin="140,445,0,0" VerticalAlignment="Top"/>
+        <Button Content="Nazad" x:Name="nazad" Click="nazad_Click_1" HorizontalAlignment="Left" Margin="74,526,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Page>

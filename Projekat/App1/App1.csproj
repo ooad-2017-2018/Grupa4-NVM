@@ -93,6 +93,10 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViewModel.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -102,8 +106,17 @@
     <Compile Include="Baza\TabelaManager.cs" />
     <Compile Include="Baza\TabelaUposlenik.cs" />
     <Compile Include="Baza\TabelaZahtjev.cs" />
+    <Compile Include="BrisanjeKlijenta.xaml.cs">
+      <DependentUpon>BrisanjeKlijenta.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BrisanjeKlijentaViewModel.cs" />
+    <Compile Include="BrisanjePoslovnice.xaml.cs">
+      <DependentUpon>BrisanjePoslovnice.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BrisanjePoslovniceViewModel.cs" />
+    <Compile Include="BrisanjeUposlenika.xaml.cs">
+      <DependentUpon>BrisanjeUposlenika.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BrisanjeUposlenikaViewModel.cs" />
     <Compile Include="KlijentKontaktViewModel.cs" />
     <Compile Include="KlijentStanjeViewModel.cs" />
@@ -124,6 +137,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Uposlenik.cs" />
     <Compile Include="Models\ZahtjevZaKredit.cs" />
+    <Compile Include="RegistracijaKlijenta.xaml.cs">
+      <DependentUpon>RegistracijaKlijenta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegistracijaKlijentaViewModel.cs" />
+    <Compile Include="RegistracijaPoslovnice.xaml.cs">
+      <DependentUpon>RegistracijaPoslovnice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegistracijaPoslovniceViewModel.cs" />
+    <Compile Include="RegistracijaUposlenika.xaml.cs">
+      <DependentUpon>RegistracijaUposlenika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegistracijaUposlenikaViewModel.cs" />
     <Compile Include="RelayComand.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +172,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BrisanjePoslovnice.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

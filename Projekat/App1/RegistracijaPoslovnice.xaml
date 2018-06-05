@@ -44,6 +44,7 @@
 
         <Custom:MapControl x:Name="mapa" HorizontalAlignment="Left" Margin="63,154,0,0" VerticalAlignment="Top" Height="237" Width="240"/>
         <Button x:Name="registrujPoslovnicu" Content="Registruj poslovnicu" HorizontalAlignment="Left" Margin="100,450,0,0" VerticalAlignment="Top"/>
+        <Button Content="Nazad" x:Name="nazad" Click="nazad_Click_1" HorizontalAlignment="Left" Margin="63,658,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

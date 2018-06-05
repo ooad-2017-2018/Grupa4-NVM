@@ -24,6 +24,7 @@ namespace App1
             try
             {
                 await Klijenti.InsertAsync(tk);
+              
             }
             catch (Exception e)
             {
@@ -110,13 +111,15 @@ namespace App1
                 var lista = App.MobileService.GetTable<TabelaKlijent>();
                 var listatmp = await lista.ToListAsync();
                 Debug.WriteLine("Broj dobavljenih : "+listatmp.Count());
+                MikroKreditnaGrupaNVM.listaKlijenata.Clear();
                 foreach (var element in listatmp)
                 {
+
                     MikroKreditnaGrupaNVM.listaKlijenata.Add(new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata));
                     Klijent k = new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata);
                     Debug.WriteLine("Broj upisanih klijenata : " + k.ispisiKlijenta());
                 }
-            
+                Debug.WriteLine("Broj upisanih klijenata : " + MikroKreditnaGrupaNVM.listaKlijenata.Count());
             }
             catch (Exception e)
             {
@@ -150,6 +153,7 @@ namespace App1
                 var lista = App.MobileService.GetTable<TabelaUposlenik>();
                 var listatmp = await lista.ToListAsync();
                 Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());
+                MikroKreditnaGrupaNVM.listaUposlenika.Clear();
                 foreach (var element in listatmp)
                 {
                     MikroKreditnaGrupaNVM.listaUposlenika.Add(new Uposlenik(element.ime, element.prezime, element.id, element.brTel, element.adresa));
@@ -169,6 +173,7 @@ namespace App1
                 var lista = App.MobileService.GetTable<TabelaManager>();
                 var listatmp = await lista.ToListAsync();
                 Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());
+                MikroKreditnaGrupaNVM.listaManagera.Count();
                 foreach (var element in listatmp)
                 {
                     MikroKreditnaGrupaNVM.listaManagera.Add(new Manager(element.ime, element.prezime, element.id, element.brTel, element.adresa));

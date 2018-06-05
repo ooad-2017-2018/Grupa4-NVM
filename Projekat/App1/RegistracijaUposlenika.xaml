@@ -8,9 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-<VisualStateManager.VisualStateGroups>
+        <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
-                
+
                 <VisualState x:Name="Mobile">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0" />
@@ -34,18 +34,25 @@
         <TextBlock HorizontalAlignment="Left" Margin="101,64,0,0" Text="Ime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="73,118,0,0" Text="Prezime:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="20,148,0,0" Text="Datum rođenja:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="94,237,0,0" Text="Pol:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="61,234,0,0" Text="Pozicija:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="81,303,0,0" Text="JMBG:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="2.956,-2.38"/>
         <TextBlock HorizontalAlignment="Left" Margin="47,360,0,0" Text="Fotografija:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button Content="Odaberi fotografiju" HorizontalAlignment="Left" Margin="130,515,0,0" VerticalAlignment="Top"/>
         <Image HorizontalAlignment="Left" Height="143" Margin="130,360,0,0" VerticalAlignment="Top" Width="147"/>
-        <TextBox HorizontalAlignment="Left" Margin="134,52,0,0" Text="TextBox" VerticalAlignment="Top" Width="209"/>
-        <TextBox HorizontalAlignment="Left" Margin="134,106,0,0" Text="TextBox" VerticalAlignment="Top" Width="209"/>
-        <TextBox HorizontalAlignment="Left" Margin="134,291,0,0" Text="TextBox" VerticalAlignment="Top" Width="209"/>
-        <DatePicker x:Name="datumRodjenja" HorizontalAlignment="Left" Margin="47,173,0,0" VerticalAlignment="Top" Width="266" Height="30"/>
-        <RadioButton Content="Ž" HorizontalAlignment="Left" Margin="232,235,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="M" HorizontalAlignment="Left" Margin="130,233,0,0" VerticalAlignment="Top"/>
-        <Button Content="Registruj" HorizontalAlignment="Left" Margin="161,569,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ime" HorizontalAlignment="Left" Margin="134,52,0,0" Text="TextBox" VerticalAlignment="Top" Width="209"/>
+        <TextBox x:Name="prezime" HorizontalAlignment="Left" Margin="134,106,0,0" Text="TextBox" VerticalAlignment="Top" Width="209"/>
+        <TextBox x:Name="jmbg" HorizontalAlignment="Left" Margin="134,291,0,0" Text="TextBox" VerticalAlignment="Top" Width="209"/>
+        <DatePicker x:Name="datumRodjenja" HorizontalAlignment="Left" Margin="134,150,0,0" VerticalAlignment="Top" Width="266" Height="30"/>
+        <Button x:Name="reg" Click="reg_Click" Content="Registruj" HorizontalAlignment="Left" Margin="161,569,0,0" VerticalAlignment="Top"/>
+        <Button Content="Nazad" x:Name="nazad" Click="nazad_Click" HorizontalAlignment="Left" Margin="176,661,0,0" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Left" Height="61" Margin="146,215,0,0" VerticalAlignment="Top" Width="232">
+            <RadioButton Checked="upo_Checked" x:Name="upo" Content="Uposlenik" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="52"/>
+            <RadioButton Checked="men_Checked" x:Name="men" Content="Menadžer" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="115"/>
+        </StackPanel>
+        <TextBox x:Name="brojtelefona" HorizontalAlignment="Left" Margin="479,283,0,0" Text="TextBox" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="374,295,0,0" Text="Broj telefona:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.5,0.2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="413,360,0,0" Text="Adresa: " TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="adresa" HorizontalAlignment="Left" Margin="479,348,0,0" Text="TextBox" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

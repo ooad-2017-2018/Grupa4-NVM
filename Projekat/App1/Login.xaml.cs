@@ -23,11 +23,15 @@ namespace App1
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        LoginViewModel lwm;
+        public static int sb=0;
         public MainPage()
         {
             
             
             this.InitializeComponent();
+            lwm = new LoginViewModel();
+            
             
         }
 
@@ -36,9 +40,20 @@ namespace App1
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void prijavi_Click(object sender, RoutedEventArgs e)
         {
-         
+         //   Bazzza.dajKlijente();
+
+            if(user.Text=="admin" && pass.Password == "admin")
+            {
+                sb = 1;
+                Frame.Navigate(typeof(Admin));
+            }
+        }
+
+        private void registrujSe_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(RegistracijaKlijenta));
         }
     }
 }
