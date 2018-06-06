@@ -1,4 +1,4 @@
-Tim je uradio 3 refaktoringa u kodu koji su unaprijedili i pojednostavili samo implementaciju naseg koda.
+Tim je uradio 3 refaktoringa u kodu koji su unaprijedili i pojednostavili implementaciju naseg koda.
 
 
 
