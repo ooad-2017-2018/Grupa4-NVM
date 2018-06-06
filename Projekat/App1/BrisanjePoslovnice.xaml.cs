@@ -27,7 +27,6 @@ namespace App1
         {
             this.InitializeComponent();
             RWM = new BrisanjePoslovniceViewModel();
-            lista.
             foreach (Poslovnica k in MikroKreditnaGrupaNVM.listaPoslovnica)
             {
                 lista.Items.Add(k.Adresa);

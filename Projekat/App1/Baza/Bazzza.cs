@@ -11,6 +11,11 @@ namespace App1
 {
     public class Bazzza
     {
+        private static Bazzza instance = new Bazzza();
+        private Bazzza() { }
+        public static Bazzza dajBazu(){
+            return instance;
+        }
         public static async void registrujKlijenta(string jmbg, string ime, string prezime, string adresa, string brTel, double plata, string un, string pass)
         {
             IMobileServiceTable<TabelaKlijent> Klijenti = App.MobileService.GetTable<TabelaKlijent>();
@@ -138,10 +143,8 @@ namespace App1
                 {
 
                     MikroKreditnaGrupaNVM.listaKlijenata.Add(new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata,element.username,element.password));
-                    Klijent k = new Klijent(element.ime, element.prezime, element.id, element.brTel, element.adresa, element.plata,element.username,element.password);
-                    Debug.WriteLine("Broj upisanih klijenata : " + k.ispisiKlijenta());
+                    
                 }
-                Debug.WriteLine("Broj upisanih klijenata : " + MikroKreditnaGrupaNVM.listaKlijenata.Count());
             }
             catch (Exception e)
             {
@@ -155,7 +158,6 @@ namespace App1
             {
                 var lista = App.MobileService.GetTable<TabelaKredit>();
                 var listatmp = await lista.ToListAsync();
-                Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());
                 foreach (var element in listatmp)
                 {
                     MikroKreditnaGrupaNVM.listaKredita.Add(new Kredit(element.VratitiNovca, element.IznosKamate, element.IdKlijenta, element.IdUposlenika, element.DatumDizanja, element.DatumVracanja));
@@ -216,7 +218,6 @@ namespace App1
             {
                 var lista = App.MobileService.GetTable<TabelaZahtjev>();
                 var listatmp = await lista.ToListAsync();
-                Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());
                 foreach (var element in listatmp)
                 {
                     MikroKreditnaGrupaNVM.listaZahtjeva.Add(new ZahtjevZaKredit(element.Glavnica, element.IdKlijenta, element.BrojRata, element.Valuta));
@@ -236,7 +237,6 @@ namespace App1
                 MikroKreditnaGrupaNVM.listaPoslovnica.Clear();
                 var lista = App.MobileService.GetTable<TabelaPoslovnica>();
                 var listatmp = await lista.ToListAsync();
-                Debug.WriteLine("Broj dobavljenih : " + listatmp.Count());
                 foreach (var element in listatmp)
                 {
                     MikroKreditnaGrupaNVM.listaPoslovnica.Add(new Poslovnica(element.id, element.adresa));
@@ -255,14 +255,15 @@ namespace App1
             {
                 var lista = App.MobileService.GetTable<TabelaKlijent>();
                 var listatmp = await lista.ToListAsync();
-                
-                foreach (var element in listatmp)
+                TabelaKlijent tk = listatmp.Find(x => x.username.Equals(p));
+                /*foreach (var element in listatmp)
                 {
                     if (element.username.Equals(p))
                     {
                         await lista.DeleteAsync(element);
                     }
-                }
+                }*/
+                await lista.DeleteAsync(tk);
             }
             catch(Exception e)
             {
@@ -277,14 +278,9 @@ namespace App1
             {
                 var lista = App.MobileService.GetTable<TabelaUposlenik>();
                 var listatmp = await lista.ToListAsync();
-
-                foreach (var element in listatmp)
-                {
-                    if (element.username.Equals(p))
-                    {
-                        await lista.DeleteAsync(element);
-                    }
-                }
+                TabelaUposlenik tk = listatmp.Find(x => x.username.Equals(p));
+                await lista.DeleteAsync(tk);
+                
             }
             catch (Exception e)
             {
@@ -299,14 +295,8 @@ namespace App1
             {
                 var lista = App.MobileService.GetTable<TabelaManager>();
                 var listatmp = await lista.ToListAsync();
-
-                foreach (var element in listatmp)
-                {
-                    if (element.username.Equals(p))
-                    {
-                        await lista.DeleteAsync(element);
-                    }
-                }
+                TabelaManager tk = listatmp.Find(x => x.username.Equals(p));
+                await lista.DeleteAsync(tk);
             }
             catch (Exception e)
             {
@@ -321,14 +311,8 @@ namespace App1
             {
                 var lista = App.MobileService.GetTable<TabelaZahtjev>();
                 var listatmp = await lista.ToListAsync();
-
-                foreach (var element in listatmp)
-                {
-                    if (element.Id.Equals(p))
-                    {
-                        await lista.DeleteAsync(element);
-                    }
-                }
+                TabelaZahtjev tk = listatmp.Find(x => x.Id.Equals(p));
+                await lista.DeleteAsync(tk);
             }
             catch (Exception e)
             {
@@ -343,14 +327,8 @@ namespace App1
             {
                 var lista = App.MobileService.GetTable<TabelaKredit>();
                 var listatmp = await lista.ToListAsync();
-
-                foreach (var element in listatmp)
-                {
-                    if (element.Id.Equals(p))
-                    {
-                        await lista.DeleteAsync(element);
-                    }
-                }
+                TabelaKredit tk = listatmp.Find(x => x.Id.Equals(p));
+                await lista.DeleteAsync(tk);
             }
             catch (Exception e)
             {
@@ -365,14 +343,8 @@ namespace App1
             {
                 var lista = App.MobileService.GetTable<TabelaPoslovnica>();
                 var listatmp = await lista.ToListAsync();
-
-                foreach (var element in listatmp)
-                {
-                    if (element.id.Equals(p))
-                    {
-                        await lista.DeleteAsync(element);
-                    }
-                }
+                TabelaPoslovnica tk = listatmp.Find(x => x.id.Equals(p));
+                await lista.DeleteAsync(tk);
             }
             catch (Exception e)
             {
