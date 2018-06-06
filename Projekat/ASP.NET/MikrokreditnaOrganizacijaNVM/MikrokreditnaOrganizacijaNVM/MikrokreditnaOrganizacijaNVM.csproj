@@ -201,6 +201,7 @@
     <Compile Include="Models\Kredit.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\OOADNVMContext.cs" />
     <Compile Include="Models\Osoba.cs" />
     <Compile Include="Models\Poslovnica.cs" />
     <Compile Include="Models\Uposlenik.cs" />
