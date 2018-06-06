@@ -15,14 +15,14 @@ namespace MikrokreditnaOrganizacijaNVM.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Mikrokreditna organizacija NVM.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Kontakt.";
 
             return View();
         }
