@@ -1,7 +1,41 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<h2>Mapa poslovnica</h2>
+<input type="button" id="btnShowLocations" value ="Prikazi poslovnice" />
+
+<div id="myMap" style="position:relative; width:600px; height:600px;"></div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+var map = null;
+
+function LoadMap() {
+    map = new Microsoft.Maps.Map('#myMap', {
+            credentials: "Bing map key"
+        });
+}
+
+$('#btnShowLocations').click(function () {
+    var url = "/Home/GetLocations";
+    $.getJSON(url, null, function (data) {
+        var pins = [];
+
+        $.each(data, function (index, LocationData) {
+            var pushpin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(
+                LocationData.latitude,
+                LocationData.longitude));
+
+            pins.push(pushpin);
+        });
+
+        map.entities.push(pins);
+
+        map.setView({
+            zoom: 5, center: new Microsoft.Maps.Location(44.199034, 17.897899)
+        });
+    });
+});
+</script>
+<script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?callback=LoadMap" async defer></script>

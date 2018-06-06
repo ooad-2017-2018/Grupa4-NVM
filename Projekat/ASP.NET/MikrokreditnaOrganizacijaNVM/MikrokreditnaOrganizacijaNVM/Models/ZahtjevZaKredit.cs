@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,10 +8,15 @@ namespace MikrokreditnaOrganizacijaNVM.Models
 {
     public class ZahtjevZaKredit// : INotifyPropertyChanged
     {
+        private int id;
+        [Required]
         private double glavnica;
         private Klijent klijent;
+        [Required]
         private string idklijenta;
+        [Required]
         private int brRata;
+        [Required]
         private string valuta;
 
         //public event PropertyChangedEventHandler PropertyChanged;
@@ -59,5 +65,7 @@ namespace MikrokreditnaOrganizacijaNVM.Models
             // set { valuta = value; }
             set { valuta = value;/* OnPropertyChanged("Valuta");*/ }
         }
+
+        public int Id { get => id; set => id = value; }
     }
 }

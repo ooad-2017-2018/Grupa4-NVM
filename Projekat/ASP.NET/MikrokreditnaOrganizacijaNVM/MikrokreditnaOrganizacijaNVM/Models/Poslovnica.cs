@@ -7,6 +7,8 @@ namespace MikrokreditnaOrganizacijaNVM.Models
 {
     public class Poslovnica// : INotifyPropertyChanged
     {
+        private int id;
+
         private Manager menager;
         private string adresa;
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -51,5 +53,7 @@ namespace MikrokreditnaOrganizacijaNVM.Models
             // set { uposleni = value; }
             set { uposleni = value; /*OnPropertyChanged("Uposleni");*/ }
         }
+
+        public int Id { get => id; set => id = value; }
     }
 }
