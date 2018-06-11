@@ -1,0 +1,42 @@
+﻿@model MikrokreditnaOrganizacijaNVM.Models.ZahtjevZaKredit
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ZahtjevZaKredit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Glavnica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Glavnica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrRata)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrRata)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valuta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valuta)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

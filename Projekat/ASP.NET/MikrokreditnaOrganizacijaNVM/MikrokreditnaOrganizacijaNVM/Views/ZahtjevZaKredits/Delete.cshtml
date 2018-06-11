@@ -1,0 +1,48 @@
+﻿@model MikrokreditnaOrganizacijaNVM.Models.ZahtjevZaKredit
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ZahtjevZaKredit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Glavnica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Glavnica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrRata)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrRata)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valuta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valuta)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

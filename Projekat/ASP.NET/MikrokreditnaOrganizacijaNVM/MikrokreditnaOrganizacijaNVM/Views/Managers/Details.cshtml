@@ -1,0 +1,82 @@
+﻿@model MikrokreditnaOrganizacijaNVM.Models.Manager
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Manager</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fourSqaureId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fourSqaureId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JMBG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JMBG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrTel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrTel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -193,7 +193,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KlijentsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ManagersController.cs" />
     <Compile Include="Controllers\NVMController.cs" />
+    <Compile Include="Controllers\UposleniksController.cs" />
+    <Compile Include="Controllers\ZahtjevZaKreditsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -280,6 +283,21 @@
     <Content Include="Views\Klijents\Details.cshtml" />
     <Content Include="Views\Klijents\Edit.cshtml" />
     <Content Include="Views\Klijents\Index.cshtml" />
+    <Content Include="Views\Uposleniks\Create.cshtml" />
+    <Content Include="Views\Uposleniks\Delete.cshtml" />
+    <Content Include="Views\Uposleniks\Details.cshtml" />
+    <Content Include="Views\Uposleniks\Edit.cshtml" />
+    <Content Include="Views\Uposleniks\Index.cshtml" />
+    <Content Include="Views\Managers\Create.cshtml" />
+    <Content Include="Views\Managers\Delete.cshtml" />
+    <Content Include="Views\Managers\Details.cshtml" />
+    <Content Include="Views\Managers\Edit.cshtml" />
+    <Content Include="Views\Managers\Index.cshtml" />
+    <Content Include="Views\ZahtjevZaKredits\Create.cshtml" />
+    <Content Include="Views\ZahtjevZaKredits\Delete.cshtml" />
+    <Content Include="Views\ZahtjevZaKredits\Details.cshtml" />
+    <Content Include="Views\ZahtjevZaKredits\Edit.cshtml" />
+    <Content Include="Views\ZahtjevZaKredits\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

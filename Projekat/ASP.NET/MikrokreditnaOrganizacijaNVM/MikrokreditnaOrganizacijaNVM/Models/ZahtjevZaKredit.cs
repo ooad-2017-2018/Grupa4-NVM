@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -40,25 +41,32 @@ namespace MikrokreditnaOrganizacijaNVM.Models
         }*/
 
 
-
+        [Required]
+        [DisplayName("Glavnica: ")]
         public double Glavnica
         {
             get { return glavnica; }
             //set { glavnica = value; }
             set { glavnica = value;/* OnPropertyChanged("Glavnica");*/ }
         }
+        [Required]
+        [DisplayName("ID klijenta: ")]
         public Klijent Klijent
         {
             get { return klijent; }
             //set { klijent = value; }
             set { klijent = value; /*OnPropertyChanged("Klijent");*/ }
         }
+        [Required]
+        [DisplayName("Broj rata: ")]
         public int BrRata
         {
             get { return brRata; }
             //  set { brRata = value; }
             set { brRata = value;/* OnPropertyChanged("BrRata"); */}
         }
+        [Required]
+        [DisplayName("Valuta: ")]
         public String Valuta
         {
             get { return valuta; }
